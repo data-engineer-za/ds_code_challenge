@@ -1,8 +1,8 @@
-# https://github.com/data-engineer-za/ds_code_challenge
-This repository contains code and output files developed by Kumaran Naicker for submission for ds code challenge
+# Submission for Data Engineering Position
+This repository contains code and output files developed by Kumaran Naicker for submission for ds code challenge for the Data Engineering Position.
 
 ## Setup:
-Firstly, using pip3, install all dependencies and required libraries from the requirements.txt file
+Use pip3 to install all dependencies and required libraries from the requirements.txt file
 run:
 * pip3 install -r [requirements.txt](https://github.com/data-engineer-za/ds_code_challenge/submission/requirements.txt)
 
