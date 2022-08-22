@@ -19,7 +19,7 @@ The [challenge_1.py](https://github.com/data-engineer-za/ds_code_challenge/blob/
 python3 challenge_1.py
 ```
 ### Summary
-- Retrieves [credentials]("https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json")
+- Retrieves [credentials](https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json)
 - Creates S3 Client for REGION="af-south-1" with retrieved credentials.
 - Uses AWS S3 SELECT command to extract the H3 resolution 8 data from "city-hex-polygons-8-10.geojson".
 - Downloads "city-hex-polygons-8-.geojson".
@@ -32,7 +32,7 @@ The [challenge_2.py](https://github.com/data-engineer-za/ds_code_challenge/blob/
 python3 challenge_2.py
 ```
 ### Summary
-- Retrieves [credentials]("https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json")
+- Retrieves [credentials](https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json)
 - Creates S3 Client for REGION="af-south-1" with retrieved credentials.
 - Downloads "sr.csv.gz" and analyses dataframe for errors.
 - Determines the H3 resolution level 8 hexagon for each service request.
@@ -48,7 +48,7 @@ python3 challenge_5.py
 ```
 ### Summary
 - Obtains the BELLVILLE SOUTH official suburb polygon from https://odp-cctegis.opendata.arcgis.com/datasets/cctegis::official-planning-suburbs/about
-- Uses arcgis [query]("https://citymaps.capetown.gov.za/agsext1/rest/services/Theme_Based/Open_Data_Service/MapServer/75/query?where=&text=BELLVILLE+SOUTH&&featureEncoding=esriDefault&f=geojson") 
+- Uses arcgis [query](https://citymaps.capetown.gov.za/agsext1/rest/services/Theme_Based/Open_Data_Service/MapServer/75/query?where=&text=BELLVILLE+SOUTH&&featureEncoding=esriDefault&f=geojson) 
 - Computes the centroid for BELLVILLE SOUTH.
 - Loads "sr_hex.csv.gz" and creates subsample of the data by selecting requests within 1 minute of the centroid of the BELLVILLE SOUTH suburb.
 - Download and prepares wind data from "Wind_direction_and_speed_2020.ods".
