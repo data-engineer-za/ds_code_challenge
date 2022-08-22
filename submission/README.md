@@ -8,15 +8,15 @@ This repository contains code and setup files developed by Kumaran Naicker for s
 - Approximately 300 MB hard drive space for for downloading and extracting the data.
 
 ### Setup:
-- Use pip3 to install all dependencies and required libraries from the requirements.txt file
+- Use pip3 to install all dependencies and required libraries from the [requirements.txt](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/requirements.txt) file
 ```bash
-pip3 install -r [requirements.txt](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/requirements.txt)
+pip3 install -r requirements.txt
 ```
 
 ## Question 1: Data Extraction
-The following script attempts Challenge #1 for the City of Cape Town - Data Science Unit Code Challenge
+The [challenge_1.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_1.py) script attempts Challenge #1 for the City of Cape Town - Data Science Unit Code Challenge
 ```bash
-python [challenge_1.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_1.py)
+python3 challenge_1.py
 ```
 ### Summary
 - Retrieves [credentials]("https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json")
