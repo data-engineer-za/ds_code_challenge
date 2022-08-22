@@ -160,6 +160,7 @@ def main():
 if __name__ == "__main__":
     # This will delete all cached files and force all downloads
     delete_cached_files = True    # set to False if cached downloads are used.  
+    is_success = True    
     if delete_cached_files:
         is_success = delete_file(CITY_HEX_POLYGONS_8_SOURCE)
         is_success = is_success and delete_file(CHALLENGE_1_TMP_OUTPUT)
