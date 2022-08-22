@@ -24,22 +24,33 @@ python3 challenge_1.py
 - Uses AWS S3 SELECT command to extract the H3 resolution 8 data from "city-hex-polygons-8-10.geojson"
 - Downloads "city-hex-polygons-8-.geojson"
 - Validate extracted H3 resolution 8 data against "city-hex-polygons-8-.geojson"
-- Save extracted H3 resolution 8 data to city-hex-polygons-8_KN.json"
+- Saves output to "city-hex-polygons-8_KN.json"
 
 ## Question 2: Initial Data Transformation
-The following script attempts Challenge #2 for the City of Cape Town - Data Science Unit Code Challenge
+The [challenge_2.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_2.py) script attempts Challenge #2 for the City of Cape Town - Data Science Unit Code Challenge
 ```bash
-* [challenge_2.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_2.py)
+python3 challenge_2.py
 ```
 ### Summary
-Output is the calculated h3_level8_index for each service request from the sr.csv.gz file, and validated against the h3_level8_index from the sr_hex.csv.gz file
+- Retrieves [credentials]("https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json")
+- Creates S3 Client for REGION="af-south-1" with retrieved credentials
+- Downloads "sr.csv.gz" and analyses dataframe for errors
+- Determines the H3 resolution level 8 hexagon for each service request
+- Inserts h3_level8_index to dataframe
+- Downloads "sr_hex.csv.gz"
+- Validates dataframe against "sr_hex.csv.gz"
+- Saves output "sr_hex_joined_KN.csv"
 
 ## Question 5: Further Data Transformations
-The following script attempts Challenge #5 for the City of Cape Town - Data Science Unit Code Challenge
+The [challenge_5.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_2.py) script attempts Challenge #5 for the City of Cape Town - Data Science Unit Code Challenge
 ```bash
-* [challenge_5.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_2.py)
+python3 challenge_5.py
 ```
 ### Summary
-A subsample of the data is created by selecting all of the requests in sr_hex.csv.gz which are within 1 minute of the centroid of the BELLVILLE SOUTH official suburb.
-Appropriate wind direction and speed data for 2020 from the Bellville South Air Quality Measurement site is extracted (bellville-south-wind_data.csv) and joined to the subsample (sr_hex_subsample_joined_KN.csv)
-The final output then anonymised the subsample (sr_hex_subsample_anonymised_KN).
+- Obtains the BELLVILLE SOUTH official suburb polygon from https://odp-cctegis.opendata.arcgis.com/datasets/cctegis::official-planning-suburbs/about
+- Uses [arcgis query]("https://citymaps.capetown.gov.za/agsext1/rest/services/Theme_Based/Open_Data_Service/MapServer/75/query?where=&text=BELLVILLE+SOUTH&&featureEncoding=esriDefault&f=geojson") 
+- Computes the centroid for BELLVILLE SOUTH 
+- Loads "sr_hex.csv.gz" and creates subsample of the data by selecting requests within 1 minute of the centroid of the BELLVILLE SOUTH suburb
+- Download and prepares wind data ["Wind_direction_and_speed_2020.ods"]("https://www.capetown.gov.za/_layouts/OpenDataPortalHandler/DownloadHandler.ashx?DocumentName=Wind_direction_and_speed_2020.ods&DatasetDocument=https%3A%2F%2Fcityapps.capetown.gov.za%2Fsites%2Fopendatacatalog%2FDocuments%2FWind%2FWind_direction_and_speed_2020.ods")
+- Joins the wind data from the Bellville South Air Quality Measurement site to subsample
+- Anonymise subsample and saves output to "sr_hex_subsample_anonymised_KN" 
