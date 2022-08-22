@@ -16,7 +16,7 @@ pip3 install -r requirements.txt
 ## Question 1: Data Extraction
 The [challenge_1.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_1.py) script attempts Challenge #1 for the City of Cape Town - Data Science Unit Code Challenge
 ```bash
-python3 challenge_1.py
+python challenge_1.py
 ```
 ### Summary
 - Retrieves [credentials](https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json)
@@ -29,7 +29,7 @@ python3 challenge_1.py
 ## Question 2: Initial Data Transformation
 The [challenge_2.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_2.py) script attempts Challenge #2 for the City of Cape Town - Data Science Unit Code Challenge
 ```bash
-python3 challenge_2.py
+python challenge_2.py
 ```
 ### Summary
 - Retrieves [credentials](https://cct-ds-code-challenge-input-data.s3.af-south-1.amazonaws.com/ds_code_challenge_creds.json)
@@ -44,13 +44,13 @@ python3 challenge_2.py
 ## Question 5: Further Data Transformations
 The [challenge_5.py](https://github.com/data-engineer-za/ds_code_challenge/blob/main/submission/challenge_5.py) script attempts Challenge #5 for the City of Cape Town - Data Science Unit Code Challenge
 ```bash
-python3 challenge_5.py
+python challenge_5.py
 ```
 ### Summary
 - Obtains the BELLVILLE SOUTH official suburb polygon from https://odp-cctegis.opendata.arcgis.com/datasets/cctegis::official-planning-suburbs/about
 - Uses arcgis [query](https://citymaps.capetown.gov.za/agsext1/rest/services/Theme_Based/Open_Data_Service/MapServer/75/query?where=&text=BELLVILLE+SOUTH&&featureEncoding=esriDefault&f=geojson) 
 - Computes the centroid for BELLVILLE SOUTH.
 - Loads "sr_hex.csv.gz" and creates subsample of the data by selecting requests within 1 minute of the centroid of the BELLVILLE SOUTH suburb.
-- Download and prepares wind data from "Wind_direction_and_speed_2020.ods".
-- Joins the wind data from the Bellville South Air Quality Measurement site to subsample.
+- Download and prepares wind data from "Wind_direction_and_speed_2020.ods". A cleaned verions is saved to "bellville-south-wind_data.csv"
+- Joins the wind data from the Bellville South Air Quality Measurement site to subsample. "sr_hex_subsample_joined_KN.csv" is saved for viewing.
 - Anonymise subsample and saves output to "sr_hex_subsample_anonymised_KN". 

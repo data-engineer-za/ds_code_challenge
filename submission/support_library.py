@@ -33,8 +33,8 @@ REQUIRED_SUBURB               = "BELLVILLE SOUTH"
 WIND_DATA_SOURCE              = "https://www.capetown.gov.za/_layouts/OpenDataPortalHandler/DownloadHandler.ashx?DocumentName=Wind_direction_and_speed_2020.ods&DatasetDocument=https%3A%2F%2Fcityapps.capetown.gov.za%2Fsites%2Fopendatacatalog%2FDocuments%2FWind%2FWind_direction_and_speed_2020.ods"
 WIND_DATA_OUTPUT              = "Wind_direction_and_speed_2020.ods"
 CHALLENGE_5_TMP_WIND_DATA     = "bellville-south-wind_data.csv"
-CHALLENGE_5_TMP_OUTPUT        = "sr_hex_subsample_joined_KN"
-CHALLENGE_5_OUTPUT            = "sr_hex_subsample_anonymised_KN"
+CHALLENGE_5_TMP_OUTPUT        = "sr_hex_subsample_joined_KN.csv"
+CHALLENGE_5_OUTPUT            = "sr_hex_subsample_anonymised_KN.csv"
 CHALLENGE_5_LOG               = "challenge_5.log"
  
 
